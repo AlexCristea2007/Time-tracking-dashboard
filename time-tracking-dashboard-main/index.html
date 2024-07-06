@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  
+</head>
+<body>
+  
+  <div class="appWrapper">
+    <!-- Main profile card -->
+    <div class="profile_container">
+      <div class="profile_data">
+        <img src="./images/image-jeremy.png" alt="profile_picture">
+        <span>Report for</span>
+        <h1>Jeremy Robson</h1>
+      </div>
+      <div class="profile_timeTracker">
+        <button id="daily_btn" type="button" onclick="showDaily()">Daily</button>
+        <button id="weekly_btn" type="button" onclick="showWeekly()">Weekly</button>
+        <button id="monthly_btn" type="button" onclick="showMonthly()">Monthly</button>
+      </div>
+    </div>
+   <!------------------->
+    <!-- Latter activities containers -->
+    <!-- Work -->
+    <div class="work_card">
+      <div class="work_top_bar">
+        <img src="./images/icon-work.svg" alt="work_image">
+      </div>
+      <div class="work_information">
+        <div class="work_top_btns">
+          <span>Work</span>
+          <button>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+          </button>
+        </div>
+        <div class="work_bottom_stats">
+          <h1 id="work_total_time">32hrs</h1>
+          <p class="last_period_results">
+            Last 
+            <span class="date_measurement">week</span> 
+            - 
+            <span id="work_previous_time">36hrs</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!------------------>
+    <!-- Play -->
+    <div class="play_card">
+      <div class="play_top_bar">
+        <img src="./images/icon-play.svg" alt="play_image">
+      </div>
+      <div class="play_information">
+        <div class="play_top_btns">
+          <span>Play</span>
+          <button>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+          </button>
+        </div>
+        <div class="play_bottom_stats">
+          <h1 id="play_total_time">10hrs</h1>
+          <p class="last_period_results">
+            Last 
+            <span class="date_measurement">week</span> 
+            - 
+            <span id="play_previous_time">8hrs</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!------------------>
+    <!-- Study -->
+    <div class="study_card">
+      <div class="study_top_bar">
+        <img src="./images/icon-study.svg" alt="study_image">
+      </div>
+      <div class="study_information">
+        <div class="study_top_btns">
+          <span>Study</span>
+          <button>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+          </button>
+        </div>
+        <div class="study_bottom_stats">
+          <h1 id="study_total_time">4hrs</h1>
+          <p class="last_period_results">
+            Last 
+            <span class="date_measurement">week</span> 
+            - 
+            <span id="study_previous_time">7hrs</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!------------------>
+    <!-- Exercise -->
+    <div class="exercise_card">
+      <div class="exercise_top_bar">
+        <img src="./images/icon-exercise.svg" alt="exercise_image">
+      </div>
+      <div class="exercise_information">
+        <div class="exercise_top_btns">
+          <span>Exercise</span>
+          <button>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+          </button>
+        </div>
+        <div class="exercise_bottom_stats">
+          <h1 id="exercise_total_time">4hrs</h1>
+          <p class="last_period_results">
+            Last 
+            <span class="date_measurement">week</span> 
+            - 
+            <span id="exercise_previous_time">5hrs</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!------------------>
+    <!-- Social -->
+    <div class="social_card">
+      <div class="social_top_bar">
+        <img src="./images/icon-social.svg" alt="social_image">
+      </div>
+      <div class="social_information">
+        <div class="social_top_btns">
+          <span>Social</span>
+          <button>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+          </button>
+        </div>
+        <div class="social_bottom_stats">
+          <h1 id="social_total_time">5hrs</h1>
+          <p class="last_period_results">
+            Last 
+            <span class="date_measurement">week</span> 
+            - 
+            <span id="social_previous_time">10hrs</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!------------------>
+    <!-- Self Care -->
+    <div class="self_care_card">
+      <div class="self_care_top_bar">
+        <img src="./images/icon-self-care.svg" alt="self_care_image">
+      </div>
+      <div class="self_care_information">
+        <div class="self_care_top_btns">
+          <span>Self Care</span>
+          <button>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"/></svg>
+          </button>
+        </div>
+        <div class="self_care_bottom_stats">
+          <h1 id="self_care_total_time">2hrs</h1>
+          <p class="last_period_results">
+            Last 
+            <span class="date_measurement">week</span> 
+            - 
+            <span id="self_care_previous_time">2hrs</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
